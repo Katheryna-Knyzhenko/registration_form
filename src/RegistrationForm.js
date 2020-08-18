@@ -13,10 +13,22 @@ class RegistrationForm extends Component {
     }
   }
 
-  render() {
+render() {
+
+  const updateIsDisableFormValue = () => {
+
+    const {isValidFirstName, isValidLastName, isValidPhone, isValidEmail} = this.state;
+
+    if (isValidFirstName && isValidLastName && isValidPhone && isValidEmail) {
+        this.setState({isDisableForm: false})
+      } else {
+        this.setState({isDisableForm: true});
+      }
+    };
+
     const typeFirstName = (event) => {
       if (event.target.value !== 0 || event.target.value !== '') {
-
+        this.textInput1.style = 'font-size: 14px; top: 6px';
         this.textLabel1.style = 'font-size: 10px; top: 4px';
       }
 
@@ -29,7 +41,7 @@ class RegistrationForm extends Component {
 
     const typeLastName = (event) => {
       if (event.target.value !== 0 || event.target.value !== '') {
-
+        this.textInput2.style = 'font-size: 14px; top: 6px';
         this.textLabel2.style = 'font-size: 10px; top: 4px';
       }
 
@@ -42,7 +54,7 @@ class RegistrationForm extends Component {
 
     const typePhone = (event) => {
       if (event.target.value !== 0 || event.target.value !== '') {
-
+        this.textInput3.style = 'font-size: 14px; top: 6px';
         this.textLabel3.style = 'font-size: 10px; top: 4px';
       }
 
@@ -56,7 +68,7 @@ class RegistrationForm extends Component {
 
     const typeEmail = (event) => {
       if (event.target.value !== 0 || event.target.value !== '') {
-
+        this.textInput4.style = 'font-size: 14px; top: 6px';
         this.textLabel4.style = 'font-size: 10px; top: 4px';
       }
 
@@ -68,33 +80,24 @@ class RegistrationForm extends Component {
       }
     };
 
-    const updateIsDisableFormValue = () => {
-      const {isValidFirstName, isValidLastName, isValidPhone, isValidEmail} = this.state;
-      if (isValidFirstName && isValidLastName && isValidPhone && isValidEmail) {
-        this.setState({isDisableForm: false})
-      } else {
-        this.setState({isDisableForm: true});
-      }
-    };
-
     return (
       <form className='form'>
         <div className='nameForm'>
           <div className='nameInputForm'>
-            <input onChange={(event) => typeFirstName(event)} id='firstName' type='text' className='firstName'/>
+            <input onChange={(event) => typeFirstName(event)} id='firstName' type='text' className='firstName' ref={(input) => { this.textInput1 = input; }}/>
             <label className='labelName' htmlFor='firstName' ref={(label) => { this.textLabel1 = label; }}>First Name</label>
           </div>
           <div className='surnameInputForm'>
-            <input onChange={(event) => typeLastName(event)} type='text' className='lastName' id='lastName'/>
+            <input onChange={(event) => typeLastName(event)} type='text' className='lastName' id='lastName' ref={(input) => { this.textInput2 = input; }}/>
             <label ref={(label) => { this.textLabel2 = label; }} className='labelSurname' htmlFor='lastName'>Last Name</label>
           </div>
         </div>
         <div className='telInputForm'>
-          <input onChange={(event) => typePhone(event)} type='tel' className='phone' id='phone'/>
+          <input onChange={(event) => typePhone(event)} ref={(input) => { this.textInput3 = input; }} type='tel' className='phone' id='phone'/>
           <label ref={(label) => { this.textLabel3 = label; }} className='labelTel' htmlFor='phone'>Phone</label>
         </div>
         <div className='emailInputForm'>
-          <input onChange={(event) => typeEmail(event)} type='email' className='email' id='email'/>
+          <input onChange={(event) => typeEmail(event)} ref={(input) => { this.textInput4 = input; }} type='email' className='email' id='email'/>
           <label className='labelEmail' htmlFor='email' ref={(label) => { this.textLabel4 = label; }}>Email</label>
         </div>
         <button disabled={this.state.isDisableForm } type='submit' className='createAccountButton'>Create Account</button>
