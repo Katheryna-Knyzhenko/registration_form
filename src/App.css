@@ -41,11 +41,22 @@
     display: flex;
     flex-flow: row;
     position: relative;
+    justify-content: space-between;
+
 }
-.firstName, .lastName {
+.nameInputForm, .surnameInputForm{
     position: relative;
     width: 48%;
     height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.firstName, .lastName {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     box-shadow: 0 1px 1px rgba(0, 66, 142, 0.25);
     border-radius: 10px;
     box-sizing: border-box;
@@ -54,15 +65,31 @@
     outline: none;
     border: none;
 }
-.firstName {
-    margin-right: 1.5em;
-}
-.firstName::placeholder, .lastName::placeholder, .phone::placeholder, .email::placeholder {
+
+/*.firstName::placeholder, .lastName::placeholder, .phone::placeholder, .email::placeholder {*/
+/*    position: absolute;*/
+/*    width: 72px;*/
+/*    height: 19px;*/
+/*    left: 28px;*/
+/*    top: 20px;*/
+/*    font-family: Manrope3;*/
+/*    font-style: normal;*/
+/*    font-weight: 500;*/
+/*    font-size: 14px;*/
+/*    line-height: 19px;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    letter-spacing: -0.01em;*/
+/*    color: #7188A3;*/
+/*}*/
+.labelName, .labelSurname, .labelTel, .labelEmail {
     position: absolute;
     width: 72px;
     height: 19px;
-    left: 28px;
-    top: 20px;
+    justify-content: center;
+    text-align: center;
+    top: 30%;
+    padding-left: 1em;
     font-family: Manrope3;
     font-style: normal;
     font-weight: 500;
@@ -72,25 +99,34 @@
     align-items: center;
     letter-spacing: -0.01em;
     color: #7188A3;
-
 }
-.phone, .email {
+.labelTel, .labelEmail {
+    padding-left: 0;
+}
+.telInputForm, .emailInputForm  {
     margin-top: 1em;
     position: relative;
     width: 99.5%;
     height: 5vh;
+    display: flex;
+
+
+}
+.phone, .email {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     box-shadow: 0 1px 1px rgba(0, 66, 142, 0.25);
     border-radius: 10px;
     box-sizing: border-box;
-    display: flex;
-    padding-left: 1.4em;
     outline: none;
     border: none;
+    padding-left: 1.2em;
 }
 .createAccountButton {
     position: absolute;
-    width: 204px;
-    height: 51px;
+    width: 41%;
+    height: 5vh;
     background: rgba(1, 163, 255, 0.25);
     border-radius: 60px;
     padding: 13px 33px;
@@ -101,6 +137,8 @@
     font-weight: bold;
     font-size: 18px;
     line-height: 25px;
+    border: none;
+    outline: none;
 }
 .createAccountButton:focus {
     outline: none;
