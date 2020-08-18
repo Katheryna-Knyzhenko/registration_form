@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+.initialForm {
+    position: relative;
+    width: 100%;
+    height: 98vh;
+    background: #F1F5FA;
+}
+.group {
+    position: absolute;
+    width: 29%;
+    height: 31vh;
+    top: 34.5vh; left: 0;right: 0;bottom: 0;
+    justify-content: center;
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+.welcome {
+    margin-bottom: 1em;
+    position: relative;
+    font-family: Manrope3;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: #333333;
+   text-align: center;
+}
+.logo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 2.1%;
+    top: 3.8%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form {
+    display: flex;
+    flex-flow: column;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nameForm {
+    display: flex;
+    flex-flow: row;
+    position: relative;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.firstName, .lastName {
+    position: relative;
+    width: 48%;
+    height: 5vh;
+    box-shadow: 0 1px 1px rgba(0, 66, 142, 0.25);
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    padding-left: 1.4em;
+    outline: none;
+    border: none;
 }
-
-.App-link {
-  color: #61dafb;
+.firstName {
+    margin-right: 1.5em;
 }
+.firstName::placeholder, .lastName::placeholder, .phone::placeholder, .email::placeholder {
+    position: absolute;
+    width: 72px;
+    height: 19px;
+    left: 28px;
+    top: 20px;
+    font-family: Manrope3;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.01em;
+    color: #7188A3;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.phone, .email {
+    margin-top: 1em;
+    position: relative;
+    width: 99.5%;
+    height: 5vh;
+    box-shadow: 0 1px 1px rgba(0, 66, 142, 0.25);
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    padding-left: 1.4em;
+    outline: none;
+    border: none;
+}
+.createAccountButton {
+    position: absolute;
+    width: 204px;
+    height: 51px;
+    background: rgba(1, 163, 255, 0.25);
+    border-radius: 60px;
+    padding: 13px 33px;
+    right: 0;
+    top: 80%;
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+}
+.createAccountButton:focus {
+    outline: none;
 }
