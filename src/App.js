@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import RegistrationForm from "./RegistrationForm";
+import Success from "./Success";
 
 class App extends Component {
   constructor(props) {
@@ -20,6 +21,7 @@ class App extends Component {
         <div className='group'>
           <div className='welcome'>Welcome to OMG</div>
           <RegistrationForm/>
+          <Success/>
         </div>
       </div>
     );

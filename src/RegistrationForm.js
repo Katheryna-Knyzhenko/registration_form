@@ -36,6 +36,7 @@ render() {
         this.setState({isValidFirstName: true}, updateIsDisableFormValue);
       } else {
         this.setState({isValidFirstName: false}, updateIsDisableFormValue);
+        this.textInput1.style = 'border: red 1px solid';
       }
     };
 
@@ -49,13 +50,14 @@ render() {
         this.setState({isValidLastName: true}, updateIsDisableFormValue);
       } else {
         this.setState({isValidLastName: false}, updateIsDisableFormValue);
+        this.textInput2.style = 'border: red 1px solid';
       }
     };
 
     const typePhone = (event) => {
       if (event.target.value !== 0 || event.target.value !== '') {
-        this.textInput3.style = 'font-size: 14px; top: 6px';
-        this.textLabel3.style = 'font-size: 10px; top: 4px';
+        this.textInput3.style = 'font-size: 12px; top: 6px';
+        this.textLabel3.style = 'font-size: 9px; top: 3px';
       }
 
       const phoneRegex = '^[+]{1}[4]{2}[(]{1}[0-9]{4}[)]{1}[0-9]{6}$';
@@ -63,6 +65,7 @@ render() {
         this.setState({isValidPhone: true}, updateIsDisableFormValue)
       } else {
         this.setState({isValidPhone: false}, updateIsDisableFormValue);
+        this.textInput3.style = 'border: red 1px solid';
       }
     };
 
@@ -75,8 +78,10 @@ render() {
       const emailRegex = '^(([^<>()\\[\\]\\\\.,;:\\s@"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@"]+)*)|(".+"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$';
       if (event.target.value.match(emailRegex)) {
         this.setState({isValidEmail: true}, updateIsDisableFormValue)
+
       } else {
         this.setState({isValidEmail: false}, updateIsDisableFormValue);
+        this.textInput4.style = 'border: red 1px solid';
       }
     };
 
@@ -100,7 +105,7 @@ render() {
           <input onChange={(event) => typeEmail(event)} ref={(input) => { this.textInput4 = input; }} type='email' className='email' id='email'/>
           <label className='labelEmail' htmlFor='email' ref={(label) => { this.textLabel4 = label; }}>Email</label>
         </div>
-        <button disabled={this.state.isDisableForm } type='submit' className='createAccountButton'>Create Account</button>
+        <button disabled={this.state.isDisableForm } type='submit' className={this.state.isDisableForm ? 'buttonDisabled' : 'buttonActive'} >Create Account</button>
       </form>
     );
   }

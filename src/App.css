@@ -130,23 +130,39 @@ input:focus {
     border: none;
     padding-left: 1.2em;
 }
-.createAccountButton {
-    position: absolute;
+.buttonDisabled  {
+    position: relative;
     width: 41%;
     height: 5vh;
+    left: 58%;
     background: rgba(1, 163, 255, 0.25);
     border-radius: 60px;
     padding: 13px 33px;
-    right: 0;
-    top: 80%;
+    margin-top: 1em;
     color: white;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
     line-height: 25px;
     border: none;
-    outline: none;
 }
 .createAccountButton:focus {
     outline: none;
+}
+.buttonActive {
+    position: relative;
+    width: 41%;
+    height: 5vh;
+    left: 58%;
+    margin-top: 1em;
+    background: rgba(1, 163, 255, 0.25);
+    border-radius: 60px;
+    padding: 13px 33px;
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    border: none;
+    background: #01A3FF;
 }
