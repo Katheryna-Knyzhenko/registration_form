@@ -65,7 +65,14 @@
     outline: none;
     border: none;
 }
-
+input:focus + label {
+    font-size: 10px;
+    top:4px;
+}
+input:focus {
+    font-size: 14px;
+    top: 5px;
+}
 /*.firstName::placeholder, .lastName::placeholder, .phone::placeholder, .email::placeholder {*/
 /*    position: absolute;*/
 /*    width: 72px;*/

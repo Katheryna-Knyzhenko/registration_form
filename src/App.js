@@ -7,6 +7,10 @@ class App extends Component {
     this.state = {}
   }
 
+
+typeYourName () {
+    alert('Имя');
+}
   render() {
     return (
       <div className="initialForm">
@@ -16,20 +20,20 @@ class App extends Component {
           <form className='form'>
             <div className='nameForm'>
               <div className='nameInputForm'>
-                <input id='firstName' type='text' className='firstName'/>
+                <input onChange={this.typeYourName} required id='firstName' type='text' className='firstName'/>
                 <label className='labelName' htmlFor='firstName'>First Name</label>
               </div>
               <div className='surnameInputForm'>
-                <input type='text' className='lastName' id='lastName'/>
+                <input required type='text' className='lastName' id='lastName'/>
                 <label className='labelSurname' htmlFor='lastName'>Last Name</label>
               </div>
             </div>
             <div className='telInputForm'>
-              <input type='tel' className='phone' id='phone' pattern='2[0-9]{3}-[0-9]{3}'/>
+              <input required type='tel' className='phone' id='phone' pattern='2[0-9]{3}-[0-9]{3}'/>
               <label className='labelTel' htmlFor='phone'>Phone</label>
             </div>
             <div className='emailInputForm'>
-              <input type='email' className='email' id='email'/>
+              <input required type='email' className='email' id='email'/>
               <label className='labelEmail' htmlFor='email'>Email</label>
             </div>
             <button type='submit' className='createAccountButton'>Create Account</button>
