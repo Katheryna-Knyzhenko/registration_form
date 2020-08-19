@@ -64,7 +64,8 @@ render() {
     const typePhone = (event) => {
       if (event.target.value !== 0 || event.target.value !== '') {
         this.textInput3.style = 'font-size: 14px; top: 8px';
-        this.textLabel3.style = 'font-size: 9px; top: 1px';
+        this.textLabel3.style = 'font-size: 9px; top: 4px; left: -7px';
+
       }
 
       const phoneRegex = '^[+]{1}[4]{2}[(]{1}[0-9]{4}[)]{1}[0-9]{6}$';
@@ -78,8 +79,8 @@ render() {
 
     const typeEmail = (event) => {
       if (event.target.value !== 0 || event.target.value !== '') {
-        this.textInput4.style = 'font-size: 14px; top: 8px';
-        this.textLabel4.style = 'font-size: 9px; top: 1px';
+        this.textInput4.style = 'font-size: 14px; top: 8px, left: -7px';
+        this.textLabel4.style = 'font-size: 9px; top: 4px';
       }
 
       const emailRegex = '^(([^<>()\\[\\]\\\\.,;:\\s@"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@"]+)*)|(".+"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$';
