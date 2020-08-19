@@ -36,7 +36,7 @@ render() {
     const typeFirstName = (event) => {
       if (event.target.value !== 0 || event.target.value !== '') {
         this.textInput1.style = 'font-size: 14px; top: 6px';
-        this.textLabel1.style = 'font-size: 10px; top: 4px';
+        this.textLabel1.style = 'font-size: 9px; top: 4px';
       }
 
       if (event.target.value.length > 0) {
@@ -50,7 +50,7 @@ render() {
     const typeLastName = (event) => {
       if (event.target.value !== 0 || event.target.value !== '') {
         this.textInput2.style = 'font-size: 14px; top: 6px';
-        this.textLabel2.style = 'font-size: 10px; top: 4px';
+        this.textLabel2.style = 'font-size: 9px; top: 4px';
       }
 
       if (event.target.value.length > 0) {
@@ -63,8 +63,8 @@ render() {
 
     const typePhone = (event) => {
       if (event.target.value !== 0 || event.target.value !== '') {
-        this.textInput3.style = 'font-size: 12px; top: 6px';
-        this.textLabel3.style = 'font-size: 9px; top: 3px';
+        this.textInput3.style = 'font-size: 14px; top: 8px';
+        this.textLabel3.style = 'font-size: 9px; top: 1px';
       }
 
       const phoneRegex = '^[+]{1}[4]{2}[(]{1}[0-9]{4}[)]{1}[0-9]{6}$';
@@ -78,8 +78,8 @@ render() {
 
     const typeEmail = (event) => {
       if (event.target.value !== 0 || event.target.value !== '') {
-        this.textInput4.style = 'font-size: 14px; top: 6px';
-        this.textLabel4.style = 'font-size: 10px; top: 4px';
+        this.textInput4.style = 'font-size: 14px; top: 8px';
+        this.textLabel4.style = 'font-size: 9px; top: 1px';
       }
 
       const emailRegex = '^(([^<>()\\[\\]\\\\.,;:\\s@"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@"]+)*)|(".+"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$';
@@ -116,7 +116,7 @@ const successedOperation = () => {
           <input onChange={(event) => typeEmail(event)} ref={(input) => { this.textInput4 = input; }} type='email' className='email' id='email'/>
           <label className='labelEmail' htmlFor='email' ref={(label) => { this.textLabel4 = label; }}>Email</label>
         </div>
-        <button disabled={this.state.isDisableForm } type='submit' className={this.state.isDisableForm ? 'buttonDisabled' : 'buttonActive'} onClick={successedOperation}>Create Account</button>
+        <button disabled={this.state.isDisableForm } type='submit' className={this.state.isDisableForm ? 'buttonDisabled' : 'buttonActive'} onClick={successedOperation}><span className='textButton'>Create Account</span></button>
       </form>
       </div>
     );

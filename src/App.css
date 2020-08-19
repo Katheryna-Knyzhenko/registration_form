@@ -21,3 +21,32 @@
     left: 2.1%;
     top: 3.8%;
 }
+
+@media (min-width: 280px) and (max-width: 760px ){
+    .group {
+        width: 60%;
+        height: 67vh;
+        top: 29vh;
+    }
+
+
+}
+@media (min-width: 768px) and (max-width: 770px ){
+    .group {
+        width: 60%;
+        height: 67vh;
+        top: 29vh;
+    }
+
+
+}
+
+@media (width: 1024px){
+    .group {
+        width: 80%;
+        height: 67vh;
+        top: 29vh;
+    }
+
+
+}
