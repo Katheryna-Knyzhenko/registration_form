@@ -92,8 +92,7 @@ render() {
       }
     };
 const successedOperation = () => {
-  this.setState({isSuccess: true})
-  console.log('fuck', this.props.isSuccess)
+  this.props.ifSuccess()
   };
     return (
       <div>

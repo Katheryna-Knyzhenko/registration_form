@@ -16,11 +16,14 @@ class App extends Component {
 
 
   render() {
+    const ifSuccess = () => {
+      this.setState({isSuccess: !this.state.isSuccess})
+    };
     return (
         <div className="initialForm">
         <div className='logo'><img alt='logo' src={require('./pictures/logo.png')}/></div>
         <div className='group'>
-          {!this.state.isSuccess ? <RegistrationForm isDisableForm = {this.state.isDisableForm} isSuccess = {this.props.isSuccess}/>
+          {!this.state.isSuccess ? <RegistrationForm ifSuccess = {ifSuccess} isDisableForm = {this.state.isDisableForm} isSuccess = {this.props.isSuccess}/>
           : <Success isDisableForm = {this.state.isDisableForm} isSuccess = {this.state.isSuccess}/>}
         </div>
       </div>
