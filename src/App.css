@@ -4,16 +4,7 @@
     height: 98vh;
     background: #F1F5FA;
 }
-.group {
-    position: absolute;
-    width: 29%;
-    height: 31vh;
-    top: 34.5vh; left: 0;right: 0;bottom: 0;
-    justify-content: center;
-    margin: 0 auto;
-    overflow: hidden;
 
-}
 .logo {
     position: absolute;
     right: 0;
@@ -22,31 +13,3 @@
     top: 3.8%;
 }
 
-@media (min-width: 280px) and (max-width: 760px ){
-    .group {
-        width: 60%;
-        height: 67vh;
-        top: 29vh;
-    }
-
-
-}
-@media (min-width: 768px) and (max-width: 770px ){
-    .group {
-        width: 60%;
-        height: 67vh;
-        top: 29vh;
-    }
-
-
-}
-
-@media (width: 1024px){
-    .group {
-        width: 80%;
-        height: 67vh;
-        top: 29vh;
-    }
-
-
-}

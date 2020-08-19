@@ -13,8 +13,9 @@ class Success extends Component {
 return (
   <div className='wrapper'>
     <div className='circle'><img alt='vector1' src={require('./pictures/Vector (1).png')}/></div>
-    <div className='tag'><img alt='vector2' src={require('./pictures/Vector.png')}/></div>
-    <span>Thank you!</span>
+    <div className='tag'><img alt='vector2' src={require('./pictures/Vector.png')}/>
+    <span className='text'>Thank you!</span>
+    </div>
   </div>
 )
   }

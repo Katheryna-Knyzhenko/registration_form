@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 
@@ -24,17 +25,26 @@
     bottom: 0;
 }
 
-span {
+.text {
     display: flex;
     position: absolute;
     font-family: Manrope3;
     font-style: normal;
     font-weight: bold;
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 1.2em;
+    line-height: 1.6em;
     text-align: center;
     letter-spacing: -0.02em;
     color: #000000;
-    top: 70%;
-    left: 41%;
+    z-index: 45;
+    top: 60%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@media (width: 1024px) {
+    .text {
+        font-size: 2.5em;
+    }
 }
