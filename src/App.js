@@ -7,6 +7,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      isSuccess: false,
+      isDisableForm: true,
     }
   }
 
@@ -16,12 +18,10 @@ class App extends Component {
   render() {
     return (
         <div className="initialForm">
-
         <div className='logo'><img alt='logo' src={require('./pictures/logo.png')}/></div>
         <div className='group'>
-          <div className='welcome'>Welcome to OMG</div>
-          <RegistrationForm/>
-          <Success/>
+          {!this.state.isSuccess ? <RegistrationForm isDisableForm = {this.state.isDisableForm} isSuccess = {this.props.isSuccess}/>
+          : <Success isDisableForm = {this.state.isDisableForm} isSuccess = {this.state.isSuccess}/>}
         </div>
       </div>
     );

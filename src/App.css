@@ -165,4 +165,5 @@ input:focus {
     line-height: 25px;
     border: none;
     background: #01A3FF;
+    outline: none;
 }

@@ -1,0 +1,42 @@
+
+
+.circle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.tag {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+span {
+    display: flex;
+    position: absolute;
+    font-family: Manrope3;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #000000;
+    top: 70%;
+    left: 41%;
+}

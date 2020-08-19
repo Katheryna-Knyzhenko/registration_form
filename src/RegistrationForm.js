@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import './App.css';
 
+
 class RegistrationForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isDisableForm: true,
+      isDisableForm: this.props.isDisableForm,
+      isSuccess: this.props.isSuccess,
       isValidFirstName: false,
       isValidLastName: false,
       isValidPhone: false,
@@ -15,15 +17,20 @@ class RegistrationForm extends Component {
 
 render() {
 
-  const updateIsDisableFormValue = () => {
+  const updateIsDisableFormValue = (props) => {
 
     const {isValidFirstName, isValidLastName, isValidPhone, isValidEmail} = this.state;
 
+
     if (isValidFirstName && isValidLastName && isValidPhone && isValidEmail) {
-        this.setState({isDisableForm: false})
-      } else {
-        this.setState({isDisableForm: true});
-      }
+
+        this.setState({isDisableForm: false});
+
+    }else {
+      this.setState({isDisableForm: true});
+
+    }
+
     };
 
     const typeFirstName = (event) => {
@@ -84,8 +91,13 @@ render() {
         this.textInput4.style = 'border: red 1px solid';
       }
     };
-
+const successedOperation = () => {
+  this.setState({isSuccess: true})
+  console.log('fuck', this.props.isSuccess)
+  };
     return (
+      <div>
+      <div className='welcome'>Welcome to OMG</div>
       <form className='form'>
         <div className='nameForm'>
           <div className='nameInputForm'>
@@ -105,8 +117,9 @@ render() {
           <input onChange={(event) => typeEmail(event)} ref={(input) => { this.textInput4 = input; }} type='email' className='email' id='email'/>
           <label className='labelEmail' htmlFor='email' ref={(label) => { this.textLabel4 = label; }}>Email</label>
         </div>
-        <button disabled={this.state.isDisableForm } type='submit' className={this.state.isDisableForm ? 'buttonDisabled' : 'buttonActive'} >Create Account</button>
+        <button disabled={this.state.isDisableForm } type='submit' className={this.state.isDisableForm ? 'buttonDisabled' : 'buttonActive'} onClick={successedOperation}>Create Account</button>
       </form>
+      </div>
     );
   }
 }
