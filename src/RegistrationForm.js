@@ -92,8 +92,8 @@ render() {
         this.textInput4.style = 'border: red 1px solid';
       }
     };
-const successedOperation = () => {
-  this.props.ifSuccess()
+  const successedOperation = () => {
+    this.props.ifSuccess()
   };
     return (
       <div className='group'>

@@ -23,7 +23,7 @@ class App extends Component {
         <div className="initialForm">
         <div className='logo'><img alt='logo' src={require('./pictures/logo.png')}/></div>
           {!this.state.isSuccess ? <RegistrationForm ifSuccess = {ifSuccess} isDisableForm = {this.state.isDisableForm} isSuccess = {this.props.isSuccess}/>
-          : <Success isDisableForm = {this.state.isDisableForm} isSuccess = {this.state.isSuccess}/>}
+          : <Success/>}
       </div>
     );
   }
